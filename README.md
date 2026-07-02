@@ -1,6 +1,6 @@
 # 🧠 Smart Inventory System
 
-A simple and efficient inventory management web application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This project allows users to manage items, categories, and stock data seamlessly through a responsive and easy-to-use interface.
+A simple and efficient inventory management web application built using (MongoDB, Express.js, Node.js). This project allows users to manage items, categories, and stock data seamlessly through a responsive and easy-to-use interface.
 
 ---
 
