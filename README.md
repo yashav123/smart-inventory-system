@@ -23,8 +23,7 @@ A simple and efficient inventory management web application built using (MongoDB
 | Express.js   | Backend server and APIs       |
 | Node.js      | Runtime environment           |
 | HTML/CSS     | Frontend UI styling           |
-| JavaScript   | Frontend scripting            |
-| Postman      | API testing                   |
+| JavaScript   | Frontend scripting            |     |                    |
 | MongoDB Compass | GUI for managing database |
 
 
