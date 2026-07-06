@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tableBody.innerHTML = items.map(item => `
             <tr>
                 <td>${item.name}</td>
-                <td>${item.description || '-'}</td>
+                <td>${item.description || '-'}</td>    // my fallback value - instead of null this will show
                 <td>${item.quantity}</td>
                 <td>$${item.price?.toFixed(2)}</td>
                 <td>
