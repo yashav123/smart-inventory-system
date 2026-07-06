@@ -35,7 +35,7 @@ router.post('/search', async (req, res) => {
   }
 });
 
-// Add new item
+// Add new item  '/' -> route path of current router;
 router.post('/', async (req, res) => {
   try {
     const newItem = new Item(req.body);
