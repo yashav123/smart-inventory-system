@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Handle search
+    // Handle search  // URLSearchParams my class for query params
     async function handleSearch() {
         const nameQuery = searchNameInput.value.trim();
         const minPrice = minPriceInput.value;
