@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/inventory
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
-app.use('/api/items', require('./routes/items'));
+app.use('/inventory/items', require('./routes/items'));
 
 // Serve frontend
 app.get(/^\/(?!api).*/, (req, res) => {
