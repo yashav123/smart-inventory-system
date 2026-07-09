@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load items from server
     async function loadItems() {
         try {
-            const response = await fetch('http://localhost:5000/api/items');
+            const response = await fetch('http://localhost:5000/inventory/items');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const items = await response.json();
             renderItems(items);
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const url = isEditMode 
-                ? `http://localhost:5000/api/items/${currentItemId}`
-                : 'http://localhost:5000/api/items';
+                ? `http://localhost:5000/inventory/items/${currentItemId}`
+                : 'http://localhost:5000/inventory/items';
             
             const method = isEditMode ? 'PUT' : 'POST';
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (maxPrice) params.append('maxPrice', maxPrice);
 
         try {
-            const response = await fetch(`http://localhost:5000/api/items/search?${params.toString()}`);
+            const response = await fetch(`http://localhost:5000/inventory/items/search?${params.toString()}`);
             if (!response.ok) throw new Error('Search failed');
             const items = await response.json();
             renderItems(items);
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit item
     async function editItem(id) {
         try {
-            const response = await fetch(`http://localhost:5000/api/items/${id}`);
+            const response = await fetch(`http://localhost:5000/inventory/items/${id}`);
             if (!response.ok) throw new Error('Failed to fetch item');
             
             const item = await response.json();
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!confirm('Are you sure you want to delete this item?')) return;
         
         try {
-            const response = await fetch(`http://localhost:5000/api/items/${id}`, {
+            const response = await fetch(`http://localhost:5000/inventory/items/${id}`, {
                 method: 'DELETE'
             });
             
